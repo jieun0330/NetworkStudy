@@ -93,7 +93,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tR-FJ-6HJ">
                                 <rect key="frame" x="68" y="469" width="272" height="175"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -108,10 +108,12 @@
                                     <action selector="recommendBeer:" destination="UqB-ky-kFN" eventType="touchUpInside" id="KOH-5j-26p"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="오늘은 이 맥주를 추천합니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkn-Hc-7I7">
-                                <rect key="frame" x="94" y="81" width="205" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘은 이 맥주를 추천합니다!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkn-Hc-7I7">
+                                <rect key="frame" x="20" y="79" width="353" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="CT8-Sk-zFr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -119,12 +121,19 @@
                         <viewLayoutGuide key="safeArea" id="niY-AG-yfl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Jkn-Hc-7I7" firstAttribute="top" secondItem="niY-AG-yfl" secondAttribute="top" constant="20" id="Akp-Sm-CHk"/>
+                            <constraint firstItem="Jkn-Hc-7I7" firstAttribute="centerX" secondItem="prD-VC-yJM" secondAttribute="centerX" id="Gj9-Xy-izO"/>
+                            <constraint firstItem="niY-AG-yfl" firstAttribute="trailing" secondItem="Jkn-Hc-7I7" secondAttribute="trailing" constant="20" id="NU7-e8-vfG"/>
+                            <constraint firstItem="Jkn-Hc-7I7" firstAttribute="leading" secondItem="niY-AG-yfl" secondAttribute="leading" constant="20" id="yVk-V5-HkB"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="NHP-FW-0N5"/>
                     <connections>
                         <outlet property="beerDescription" destination="9tR-FJ-6HJ" id="bXC-q2-cRG"/>
                         <outlet property="beerImage" destination="r6H-W0-jkQ" id="mUd-0R-bNb"/>
                         <outlet property="beerName" destination="itJ-3t-m5m" id="JAB-hJ-79O"/>
+                        <outlet property="beerTitle" destination="Jkn-Hc-7I7" id="XGF-kn-pXe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5JT-yJ-Rof" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

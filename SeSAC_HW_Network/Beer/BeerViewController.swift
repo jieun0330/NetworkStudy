@@ -17,12 +17,16 @@ struct Beer: Decodable {
 
 class BeerViewController: UIViewController {
     
+    @IBOutlet var beerTitle: UILabel!
     @IBOutlet var beerImage: UIImageView!
     @IBOutlet var beerName: UILabel!
     @IBOutlet var beerDescription: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        beerTitle.font = UIFont.boldSystemFont(ofSize: 20)
+        beerName.font = UIFont.boldSystemFont(ofSize: 16)
         
         callRequest()
         
