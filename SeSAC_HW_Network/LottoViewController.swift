@@ -33,18 +33,23 @@ class LottoViewController: UIViewController {
         numberTextField.tintColor = .clear
         numberTextField.inputView = lottoPickerView
         
-        lottoPickerView.delegate = self
-        lottoPickerView.dataSource = self
-        
-        callRequest()
+        configureView()
 
     }
     
-    func callRequest() {
+    func configureView() {
         
-        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=1102"
+        lottoPickerView.delegate = self
+        lottoPickerView.dataSource = self
+        
+    }
+    
+    
+    func callRequest(number: Int) {
+        
+        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"
         AF
-            .request(url)
+            .request(url, method: .get)
             .responseDecodable(of: Lotto.self) { response in
                 switch response.result {
                 case .success(let success):
@@ -69,6 +74,7 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource  {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        callRequest(number: numberList[row])
         numberTextField.text = "\(numberList[row])회차"
     }
     
