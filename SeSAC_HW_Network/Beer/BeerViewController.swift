@@ -40,14 +40,13 @@ class BeerViewController: UIViewController {
             .responseDecodable(of: [Beer].self) { response in
                 switch response.result {
                 case .success(let success):
-                    print(success[0])
                     //Mark: - 애초에 사이트에서 랜덤으로 뿌려주니까 [0] 이렇게 해도 되는건가?
                     self.beerImage.kf.setImage(with: URL(string: success[0].image_url))
                     self.beerName.text = success[0].name
                     self.beerDescription.text = success[0].description
                     
                 case .failure(let failure):
-                    print("오류 발생")
+                    print(failure.localizedDescription)
                 }
             }
     }

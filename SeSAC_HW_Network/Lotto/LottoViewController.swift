@@ -19,7 +19,7 @@ struct Lotto: Decodable {
 }
 
 class LottoViewController: UIViewController {
-
+    
     @IBOutlet var numberTextField: UITextField!
     @IBOutlet var lottoNumberLabel: UILabel!
     
@@ -34,16 +34,19 @@ class LottoViewController: UIViewController {
         numberTextField.inputView = lottoPickerView
         
         configureView()
-
+        
+        callRequest(number: numberList.endIndex)
+        numberTextField.text = "\(numberList.endIndex)회차"
+    }
+    
+    @IBAction func tapGestureClicked(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
     
     func configureView() {
-        
         lottoPickerView.delegate = self
         lottoPickerView.dataSource = self
-        
     }
-    
     
     func callRequest(number: Int) {
         
@@ -59,12 +62,10 @@ class LottoViewController: UIViewController {
                 }
             }
     }
-    
 }
 
-
-
 extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource  {
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -81,5 +82,4 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource  {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return "\(numberList[row])회차"
     }
-    
 }

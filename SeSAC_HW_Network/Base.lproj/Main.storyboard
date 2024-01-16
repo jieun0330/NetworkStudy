@@ -46,11 +46,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1pv-Aa-L3L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="YtD-x6-hPv" firstAttribute="leading" secondItem="1pv-Aa-L3L" secondAttribute="leading" constant="20" id="7pF-aY-LnR"/>
                             <constraint firstItem="YtD-x6-hPv" firstAttribute="top" secondItem="1pv-Aa-L3L" secondAttribute="top" constant="20" id="EdH-2t-RFp"/>
                             <constraint firstItem="1pv-Aa-L3L" firstAttribute="trailing" secondItem="YtD-x6-hPv" secondAttribute="trailing" constant="20" id="thU-oO-Spb"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="T9K-RT-ubc" appends="YES" id="qsA-Lg-lYQ"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="y4i-qj-RJp"/>
                     <connections>
@@ -59,6 +63,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPa-kC-HwQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="T9K-RT-ubc">
+                    <connections>
+                        <action selector="tapGestureClicked:" destination="HYb-a0-bpY" id="kWM-Bq-Hb5"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1889.3129770992366" y="4.9295774647887329"/>
         </scene>
@@ -109,6 +118,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="niY-AG-yfl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="NHP-FW-0N5"/>
                     <connections>
@@ -127,6 +137,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lfQ-4h-md5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E6c-Z0-eqs">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

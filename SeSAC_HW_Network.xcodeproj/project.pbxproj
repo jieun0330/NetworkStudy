@@ -64,6 +64,8 @@
 		C2AA97EB2B5666FA00302798 /* SeSAC_HW_Network */ = {
 			isa = PBXGroup;
 			children = (
+				C2AA980D2B56999500302798 /* Beer */,
+				C2AA980C2B56998A00302798 /* Lotto */,
 				C2AA97EC2B5666FA00302798 /* AppDelegate.swift */,
 				C2AA97EE2B5666FA00302798 /* SceneDelegate.swift */,
 				C2AA97F02B5666FA00302798 /* ViewController.swift */,
@@ -71,10 +73,24 @@
 				C2AA97F52B5666FD00302798 /* Assets.xcassets */,
 				C2AA97F72B5666FD00302798 /* LaunchScreen.storyboard */,
 				C2AA97FA2B5666FD00302798 /* Info.plist */,
-				C2AA98002B56679F00302798 /* LottoViewController.swift */,
-				C2AA98072B567E0900302798 /* BeerViewController.swift */,
 			);
 			path = SeSAC_HW_Network;
+			sourceTree = "<group>";
+		};
+		C2AA980C2B56998A00302798 /* Lotto */ = {
+			isa = PBXGroup;
+			children = (
+				C2AA98002B56679F00302798 /* LottoViewController.swift */,
+			);
+			path = Lotto;
+			sourceTree = "<group>";
+		};
+		C2AA980D2B56999500302798 /* Beer */ = {
+			isa = PBXGroup;
+			children = (
+				C2AA98072B567E0900302798 /* BeerViewController.swift */,
+			);
+			path = Beer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
