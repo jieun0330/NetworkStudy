@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HYb-a0-bpY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lfQ-4h-md5">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="138" y="5"/>
         </scene>
-        <!--Lotto View Controller-->
+        <!--Item-->
         <scene sceneID="NlG-h3-mbn">
             <objects>
                 <viewController id="HYb-a0-bpY" customClass="LottoViewController" customModule="SeSAC_HW_Network" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,6 +52,7 @@
                             <constraint firstItem="1pv-Aa-L3L" firstAttribute="trailing" secondItem="YtD-x6-hPv" secondAttribute="trailing" constant="20" id="thU-oO-Spb"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="y4i-qj-RJp"/>
                     <connections>
                         <outlet property="lottoNumberLabel" destination="jyq-K9-6f9" id="kNH-5A-kZD"/>
                         <outlet property="numberTextField" destination="YtD-x6-hPv" id="OVq-kT-qsl"/>
@@ -59,12 +60,93 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPa-kC-HwQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1889.3129770992366" y="4.9295774647887329"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="kbU-pn-yiG">
+            <objects>
+                <viewController id="UqB-ky-kFN" customClass="BeerViewController" customModule="SeSAC_HW_Network" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="prD-VC-yJM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r6H-W0-jkQ">
+                                <rect key="frame" x="76" y="178" width="240" height="215"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itJ-3t-m5m">
+                                <rect key="frame" x="20" y="416" width="349" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tR-FJ-6HJ">
+                                <rect key="frame" x="68" y="469" width="272" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfn-hk-U43">
+                                <rect key="frame" x="107" y="705" width="180" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="checkmark.bubble" catalog="system" title="다른 맥주 추천받기">
+                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recommendBeer:" destination="UqB-ky-kFN" eventType="touchUpInside" id="KOH-5j-26p"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="오늘은 이 맥주를 추천합니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkn-Hc-7I7">
+                                <rect key="frame" x="94" y="81" width="205" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="niY-AG-yfl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="NHP-FW-0N5"/>
+                    <connections>
+                        <outlet property="beerDescription" destination="9tR-FJ-6HJ" id="bXC-q2-cRG"/>
+                        <outlet property="beerImage" destination="r6H-W0-jkQ" id="mUd-0R-bNb"/>
+                        <outlet property="beerName" destination="itJ-3t-m5m" id="JAB-hJ-79O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5JT-yJ-Rof" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1889" y="704"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="YDS-C1-4fJ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lfQ-4h-md5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E6c-Z0-eqs">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HYb-a0-bpY" kind="relationship" relationship="viewControllers" id="zKh-nB-HjY"/>
+                        <segue destination="UqB-ky-kFN" kind="relationship" relationship="viewControllers" id="iGA-o9-Udz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i7S-t7-27s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="962.59541984732823" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark.bubble" catalog="system" width="128" height="110"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
