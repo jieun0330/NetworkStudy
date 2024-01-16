@@ -13,6 +13,7 @@
 		C2AA97F42B5666FA00302798 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2AA97F22B5666FA00302798 /* Main.storyboard */; };
 		C2AA97F62B5666FD00302798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2AA97F52B5666FD00302798 /* Assets.xcassets */; };
 		C2AA97F92B5666FD00302798 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2AA97F72B5666FD00302798 /* LaunchScreen.storyboard */; };
+		C2AA98012B56679F00302798 /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA98002B56679F00302798 /* LottoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C2AA97F52B5666FD00302798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2AA97F82B5666FD00302798 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2AA97FA2B5666FD00302798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2AA98002B56679F00302798 /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				C2AA97F52B5666FD00302798 /* Assets.xcassets */,
 				C2AA97F72B5666FD00302798 /* LaunchScreen.storyboard */,
 				C2AA97FA2B5666FD00302798 /* Info.plist */,
+				C2AA98002B56679F00302798 /* LottoViewController.swift */,
 			);
 			path = SeSAC_HW_Network;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2AA97F12B5666FA00302798 /* ViewController.swift in Sources */,
+				C2AA98012B56679F00302798 /* LottoViewController.swift in Sources */,
 				C2AA97ED2B5666FA00302798 /* AppDelegate.swift in Sources */,
 				C2AA97EF2B5666FA00302798 /* SceneDelegate.swift in Sources */,
 			);
