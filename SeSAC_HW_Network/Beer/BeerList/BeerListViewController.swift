@@ -16,7 +16,7 @@ struct BeerList: Decodable {
 }
 
 class BeerListViewController: UIViewController {
-
+    
     @IBOutlet var beerListTableView: UITableView!
     
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class BeerListViewController: UIViewController {
         
         beerListTableView.delegate = self
         beerListTableView.dataSource = self
-
+        
     }
     
     func callRequest() {
@@ -35,9 +35,9 @@ class BeerListViewController: UIViewController {
             .responseDecodable(of: [BeerList].self) { response in
                 switch response.result {
                 case .success(let success):
-                    print("success")
+                    print(success)
                 case .failure(let failure):
-                    print("오류 발생")
+                    print(failure)
                 }
             }
     }
