@@ -9,8 +9,17 @@ import UIKit
 
 class BeerListTableViewCell: UITableViewCell {
 
+    @IBOutlet var beerImage: UIImageView!
+    @IBOutlet var beerName: UILabel!
+    @IBOutlet var beerDescription: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
+        
     }
 
 }

@@ -15,6 +15,7 @@ class BeerViewController: UIViewController {
     @IBOutlet var beerImage: UIImageView!
     @IBOutlet var beerName: UILabel!
     @IBOutlet var beerDescription: UILabel!
+    @IBOutlet var beerListButton: UIButton!
     
     let randomBeer = BeerAPI()
     
@@ -23,16 +24,30 @@ class BeerViewController: UIViewController {
         
         configureView()
         callRequest()
+        beerListButton.addTarget(self, action: #selector(beerListButtonClicked), for: .touchUpInside)
+
+        
 
     }
+    
+    @objc func beerListButtonClicked() {
+        let vc = storyboard?.instantiateViewController(identifier: "BeerListViewController") as! BeerListViewController
+        present(vc, animated: true)
+    }
+    
     
     func configureView() {
         beerTitle.font = UIFont.boldSystemFont(ofSize: 20)
         beerName.font = UIFont.boldSystemFont(ofSize: 16)
+        
+        beerListButton.setTitle("맥주 더보기", for: .normal)
     }
     
+
+    
+    
     func callRequest() {
-        randomBeer.callRequest { result in
+        randomBeer.callRequest(url: .random) { result in
             self.beerImage.kf.setImage(with: URL(string: result[0].image_url))
             self.beerName.text = result[0].name
             self.beerDescription.text = result[0].description

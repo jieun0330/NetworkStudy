@@ -48,6 +48,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="beerDescription" destination="c2E-Px-RMn" id="OAX-GC-vZO"/>
+                <outlet property="beerImage" destination="NDE-uE-xvR" id="BBc-mH-9Bu"/>
+                <outlet property="beerName" destination="NHK-1h-4TS" id="Vc5-AP-wr3"/>
+            </connections>
             <point key="canvasLocation" x="-40.458015267175568" y="73.943661971830991"/>
         </tableViewCell>
     </objects>
