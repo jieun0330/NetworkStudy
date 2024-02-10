@@ -25,6 +25,8 @@ class BeerListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "닫기", style: .done, target: self, action: #selector(closeClicked))
+        
         beerListTableView.delegate = self
         beerListTableView.dataSource = self
         
@@ -38,6 +40,10 @@ class BeerListViewController: UIViewController {
         beerListTableView.register(xib, forCellReuseIdentifier: "BeerListTableViewCell")
         
         
+    }
+    
+    @objc func closeClicked() {
+        dismiss(animated: true)
     }
     
     

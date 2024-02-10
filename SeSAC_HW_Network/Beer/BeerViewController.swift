@@ -31,8 +31,16 @@ class BeerViewController: UIViewController {
     }
     
     @objc func beerListButtonClicked() {
+        print("clicked")
+//        let sb = UIStoryboard(name: "BeerListViewController", bundle: nil)
         let vc = storyboard?.instantiateViewController(identifier: "BeerListViewController") as! BeerListViewController
-        present(vc, animated: true)
+        
+        let nav = UINavigationController(rootViewController: vc)
+        
+        nav.modalPresentationStyle = .fullScreen
+//        navigationController.presentviewco
+//        navigationController?.pushViewController(nav, animated: true)
+        present(nav, animated: true)
     }
     
     
