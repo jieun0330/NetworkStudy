@@ -18,7 +18,12 @@ class BeerListTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        beerName.numberOfLines = 0
+        beerName.font = UIFont.systemFont(ofSize: 12)
+        beerName.textAlignment = .center
         
+        beerDescription.numberOfLines = 0
+        beerDescription.font = UIFont.systemFont(ofSize: 10)
         
     }
 

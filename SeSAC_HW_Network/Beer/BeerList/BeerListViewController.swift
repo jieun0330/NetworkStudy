@@ -26,6 +26,7 @@ class BeerListViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "닫기", style: .done, target: self, action: #selector(closeClicked))
+        navigationItem.leftBarButtonItem?.tintColor = .black
         
         beerListTableView.delegate = self
         beerListTableView.dataSource = self
