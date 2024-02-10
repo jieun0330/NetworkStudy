@@ -22,10 +22,7 @@ enum beerURL {
     }
 }
 
-
 class BeerAPI {
-    
-//    let url = "https://api.punkapi.com/v2/beers/random"
     
     func callRequest(url: beerURL, completionHandler: @escaping ([Beer]) -> Void) {
         
@@ -42,21 +39,4 @@ class BeerAPI {
                 }
             }
     }
-    
-//    func callRequestDetailBeer() {
-//        let url = "https://api.punkapi.com/v2/beers"
-//        
-//        AF
-//            .request(url, method: .get)
-//            .responseDecodable(of: [Beer].self) { response in
-//                switch response.result {
-//                case .success(let success):
-//                    print(success)
-//                case .failure(let failure):
-//                    print(failure)
-//                }
-//            }
-//    }
-    
-    
 }

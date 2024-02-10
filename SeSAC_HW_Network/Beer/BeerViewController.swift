@@ -25,34 +25,20 @@ class BeerViewController: UIViewController {
         configureView()
         callRequest()
         beerListButton.addTarget(self, action: #selector(beerListButtonClicked), for: .touchUpInside)
-
-        
-
     }
     
     @objc func beerListButtonClicked() {
-        print("clicked")
-//        let sb = UIStoryboard(name: "BeerListViewController", bundle: nil)
         let vc = storyboard?.instantiateViewController(identifier: "BeerListViewController") as! BeerListViewController
-        
         let nav = UINavigationController(rootViewController: vc)
-        
         nav.modalPresentationStyle = .fullScreen
-//        navigationController.presentviewco
-//        navigationController?.pushViewController(nav, animated: true)
         present(nav, animated: true)
     }
-    
     
     func configureView() {
         beerTitle.font = UIFont.boldSystemFont(ofSize: 20)
         beerName.font = UIFont.boldSystemFont(ofSize: 16)
-        
         beerListButton.setTitle("맥주 더보기", for: .normal)
     }
-    
-
-    
     
     func callRequest() {
         randomBeer.callRequest(url: .random) { result in

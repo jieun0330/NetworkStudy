@@ -8,13 +8,6 @@
 import UIKit
 import Alamofire
 
-//Mark: - BeerViewController에 있는거랑 동일하니까 따로 빼서 같이 쓸 수 있는건가?
-//struct BeerList: Decodable {
-//    let name: String
-//    let image_url: String
-//    let description: String
-//}
-
 class BeerListViewController: UIViewController {
     
     @IBOutlet var beerListTableView: UITableView!
@@ -39,20 +32,11 @@ class BeerListViewController: UIViewController {
         
         let xib = UINib(nibName: "BeerListTableViewCell", bundle: nil)
         beerListTableView.register(xib, forCellReuseIdentifier: "BeerListTableViewCell")
-        
-        
     }
     
     @objc func closeClicked() {
         dismiss(animated: true)
     }
-    
-    
-    
-    
-    
-    
-
 }
 
 extension BeerListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -62,13 +46,9 @@ extension BeerListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BeerListTableViewCell")! as! BeerListTableViewCell
-        
-        
-        
         cell.beerImage.kf.setImage(with: URL(string: beerList[indexPath.row].image_url))
         cell.beerName.text = beerList[indexPath.row].name
         cell.beerDescription.text = beerList[indexPath.row].description
-        
         
         return cell
     }

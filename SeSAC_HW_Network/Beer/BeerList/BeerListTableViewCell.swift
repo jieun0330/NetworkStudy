@@ -8,12 +8,10 @@
 import UIKit
 
 class BeerListTableViewCell: UITableViewCell {
-
+    
     @IBOutlet var beerImage: UIImageView!
     @IBOutlet var beerName: UILabel!
     @IBOutlet var beerDescription: UILabel!
-    
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +22,5 @@ class BeerListTableViewCell: UITableViewCell {
         
         beerDescription.numberOfLines = 0
         beerDescription.font = UIFont.systemFont(ofSize: 10)
-        
     }
-
 }
